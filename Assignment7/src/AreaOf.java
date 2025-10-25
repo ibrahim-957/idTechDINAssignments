@@ -7,13 +7,13 @@ public class AreaOf {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int resultRectangle = area(n, m);
-        int resultSquare = area(n);
+        double resultSquare = area(n);
         System.out.println(resultRectangle);
         System.out.println(resultSquare);
     }
 
-    static int area(int side) {
-        return side ^ 2;
+    static double area(int side) {
+        return Math.pow(side, 2);
     }
 
     static int area(int length, int width) {
