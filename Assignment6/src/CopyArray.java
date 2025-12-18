@@ -16,6 +16,5 @@ public class CopyArray {
         int[] copy = Arrays.copyOf(arr, arraySize);
         System.out.println("The elements in the copy is: " + Arrays.toString(copy));
         sc.close();
-        System.arraycopy(arr,)
     }
 }

@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment1.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/1/1.iml" filepath="$PROJECT_DIR$/Assignment9/1/1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/2/2.iml" filepath="$PROJECT_DIR$/Assignment9/2/2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/3/3.iml" filepath="$PROJECT_DIR$/Assignment9/3/3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/4/4.iml" filepath="$PROJECT_DIR$/Assignment9/4/4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/5/5.iml" filepath="$PROJECT_DIR$/Assignment9/5/5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/6/6.iml" filepath="$PROJECT_DIR$/Assignment9/6/6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment9/7/7.iml" filepath="$PROJECT_DIR$/Assignment9/7/7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment3/Assignment3.iml" filepath="$PROJECT_DIR$/Assignment3/Assignment3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment4/Assignment4.iml" filepath="$PROJECT_DIR$/Assignment4/Assignment4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment5/Assignment5.iml" filepath="$PROJECT_DIR$/Assignment5/Assignment5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment6/Assignment6.iml" filepath="$PROJECT_DIR$/Assignment6/Assignment6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment7/Assignment7.iml" filepath="$PROJECT_DIR$/Assignment7/Assignment7.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DIN.iml" filepath="$PROJECT_DIR$/.idea/DIN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdTechAssignment-8/IdTechAssignment-8.iml" filepath="$PROJECT_DIR$/IdTechAssignment-8/IdTechAssignment-8.iml" />
     </modules>
   </component>
 </project>

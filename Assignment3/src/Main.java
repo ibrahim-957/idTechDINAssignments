@@ -6,7 +6,6 @@ public class Main {
         System.out.println("Subtraction (a - b): " + (a - b));
         System.out.println("Multiplication (a * b): " + (a * b));
         System.out.println("Division (a / b): " + (a / b));
-        // ümumilik də data tipi olarak tam ədədləri saxlayan tiplər  bölmə əməliyyatından alınan nəticənin tam hissəsini geri qaytarır yəni 15/4 nəticə olarak 3.75 alınır bununda tam hissəsi 3 olduğu üçün nəticə 3 götürülür.
         System.out.println("Modulus (a % b): " + (a % b));
 
         System.out.println("----------------------------------");
