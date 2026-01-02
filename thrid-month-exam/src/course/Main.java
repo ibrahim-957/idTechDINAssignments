@@ -1,8 +1,10 @@
 package course;
 
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
-        OnlineCourse course = new OnlineCourse("Java", "Engin", 8, "Udemy", 45);
+        OnlineCourse course = new OnlineCourse("Java", "Engin", BigDecimal.valueOf(10), "Udemy", 45);
         course.display();
 
         if (course.isEligibleForCertificate(35)){

@@ -1,28 +1,16 @@
 package course;
 
+import java.math.BigDecimal;
+
 public class OnlineCourse extends Course {
     private String platformName;
     private double duration;
 
-    public OnlineCourse(String courseName, String instructorName, int credit, String platformName, double duration) {
+    public OnlineCourse(String courseName, String instructorName, BigDecimal credit, String platformName, double duration) {
         super(courseName, instructorName, credit);
         this.platformName = platformName;
         this.duration = duration;
     }
-
-    public String getPlatformName() {
-        return platformName;
-    }
-    public void setPlatformName(String platformName) {
-        this.platformName = platformName;
-    }
-    public double getDuration() {
-        return duration;
-    }
-    public void setDuration(double duration) {
-        this.duration = duration;
-    }
-
     @Override
     public void display(){
         super.display();

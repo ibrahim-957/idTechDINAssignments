@@ -1,44 +1,19 @@
 package course;
 
+import java.math.BigDecimal;
+
 public class Course {
     private String courseName;
     private String instructorName;
-    private int credit;
+    private BigDecimal credit;
 
-    public Course() {
-    }
-
-    public Course(String courseName, String instructorName, int credit) {
+    public Course(String courseName, String instructorName, BigDecimal credit) {
         this.courseName = courseName;
         this.instructorName = instructorName;
         this.credit = credit;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public String getInstructorName() {
-        return instructorName;
-    }
-
-    public void setInstructorName(String instructorName) {
-        this.instructorName = instructorName;
-    }
-
-    public int getCredit() {
-        return credit;
-    }
-
-    public void setCredit(int credit) {
-        this.credit = credit;
-    }
-
-    public void display(){
+    public void display() {
         System.out.println("Course Name: " + courseName);
         System.out.println("Instructor Name: " + instructorName);
         System.out.println("Credit: " + credit);
