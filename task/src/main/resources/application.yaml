@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: task
+
+server:
+  port: 8081
