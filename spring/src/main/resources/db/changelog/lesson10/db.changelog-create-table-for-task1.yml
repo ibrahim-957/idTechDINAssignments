@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-categories-table-for-task1
+      author: ibrahim-957
+      changes:
+        - createTable:
+            tableName: l10t1_categories
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+      rollback:
+        - dropTable:
+            tableName: l10t1_categories
+
+  - changeSet:
+      id: create-products-table-for-task1
+      author: ibrahim_957
+      changes:
+        - createTable:
+            tableName: l10t1_products
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sku
+                  type: VARCHAR(50)
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP WITHOUT TIME ZONE
+                  defaultValueComputed: NOW()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category_id
+                  type: BIGINT
+        - addForeignKeyConstraint:
+            constraintName: fk_l10_products_category
+            baseTableName: l10t1_products
+            baseColumnNames: category_id
+            referencedTableName: l10t1_categories
+            referencedColumnNames: id
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+
+        - createIndex:
+            indexName: idx_l10t1_products_category_id
+            tableName: l10t1_products
+            columns:
+              - column:
+                  name: category_id
+      rollback:
+        - dropTable:
+            tableName: l10t1_products

@@ -1,0 +1,110 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table-for-lesson09-task1
+      author: Ibrahim_957
+      changes:
+        - createTable:
+            tableName: users_lesson09_task1
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: VARCHAR(20)
+                  defaultValue: ACTIVE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: NOW()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: NOW()
+                  constraints:
+                    nullable: false
+
+
+  - changeSet:
+      id: create-products-table-for-lesson09-task1
+      author: ibrahim-957
+      changes:
+        - sql:
+            sql: CREATE EXTENSION IF NOT EXISTS pgcrypto;
+        - createTable:
+            tableName: products_lesson09_task1
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: encrypted_description
+                  type: BYTEA
+              - column:
+                  name: long_content
+                  type: TEXT
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: create-categories-table-forlesson09-task1
+      author: ibrahim-957
+      changes:
+        - createTable:
+            tableName: categories_lesson09_task1
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(80)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: street
+                  type: VARCHAR(100)
+              - column:
+                  name: city
+                  type: VARCHAR(50)
+              - column:
+                  name: country
+                  type: VARCHAR(50)

@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - includeAll:
+      path: db/changelog/lesson06
+
+  - includeAll:
+      path: db/changelog/lesson09
+
+  - includeAll:
+      path: db/changelog/lesson10

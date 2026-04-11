@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: lesson09-task03-001-create-l9t3-users
+      author: ibrahim
+      changes:
+        - createTable:
+            tableName: l9t3_users
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: login_count
+                  type: INTEGER
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: NOW()
+
+  - changeSet:
+      id: lesson09-task03-002-index-email
+      author: ibrahim
+      changes:
+        - createIndex:
+            indexName: idx_l9t3_users_email
+            tableName: l9t3_users
+            columns:
+              - column:
+                  name: email

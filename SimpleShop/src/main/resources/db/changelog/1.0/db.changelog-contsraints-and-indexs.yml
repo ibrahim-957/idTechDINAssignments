@@ -1,0 +1,112 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-unique-email
+      author: dev
+      changes:
+        - addUniqueConstraint:
+            tableName: users
+            columnNames: email
+            constraintName: uq_users_email
+
+  - changeSet:
+      id: 002-unique-username
+      author: dev
+      changes:
+        - addUniqueConstraint:
+            tableName: users
+            columnNames: username
+            constraintName: uq_users_username
+
+  - changeSet:
+      id: 002-fk-orders-user
+      author: dev
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: orders
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: fk_orders_user_id
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+
+  - changeSet:
+      id: 002-fk-order-items-order
+      author: dev
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: order_items
+            baseColumnNames: order_id
+            referencedTableName: orders
+            referencedColumnNames: id
+            constraintName: fk_order_items_order_id
+            onDelete: CASCADE
+            onUpdate: CASCADE
+
+  - changeSet:
+      id: 002-fk-order-items-product
+      author: dev
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: order_items
+            baseColumnNames: product_id
+            referencedTableName: products
+            referencedColumnNames: id
+            constraintName: fk_order_items_product_id
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+
+  - changeSet:
+      id: 002-idx-orders-user-id
+      author: dev
+      changes:
+        - createIndex:
+            tableName: orders
+            indexName: idx_orders_user_id
+            columns:
+              - column:
+                  name: user_id
+
+  - changeSet:
+      id: 002-idx-order-items-order-id
+      author: dev
+      changes:
+        - createIndex:
+            tableName: order_items
+            indexName: idx_order_items_order_id
+            columns:
+              - column:
+                  name: order_id
+
+  - changeSet:
+      id: 002-idx-order-items-product-id
+      author: dev
+      changes:
+        - createIndex:
+            tableName: order_items
+            indexName: idx_order_items_product_id
+            columns:
+              - column:
+                  name: product_id
+
+  - changeSet:
+      id: 002-idx-users-email
+      author: dev
+      changes:
+        - createIndex:
+            tableName: users
+            indexName: idx_users_email
+            columns:
+              - column:
+                  name: email
+
+  - changeSet:
+      id: 002-idx-users-username
+      author: dev
+      changes:
+        - createIndex:
+            tableName: users
+            indexName: idx_users_username
+            columns:
+              - column:
+                  name: username
